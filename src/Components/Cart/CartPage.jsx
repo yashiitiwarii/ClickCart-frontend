@@ -10,7 +10,7 @@ import { convertToINR } from "../../utils/currencyUtils";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-
+import "../../config.json";
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
   const user = useContext(UserContext);
@@ -63,7 +63,7 @@ const CartPage = () => {
       <ToastContainer />
       <div className="align_center user_info">
         <img
-          src={`http://localhost:5000/profile/${user?.profilePic}`}
+          src={`${config.backendURL}/profile/${user?.profilePic}`}
           alt="user Profile"
         />
         <div>
