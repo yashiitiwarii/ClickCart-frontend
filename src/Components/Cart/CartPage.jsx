@@ -10,7 +10,7 @@ import { convertToINR } from "../../utils/currencyUtils";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import "../../config.json";
+import config from "../../config.json";
 const CartPage = () => {
   const [subTotal, setSubTotal] = useState(0);
   const user = useContext(UserContext);

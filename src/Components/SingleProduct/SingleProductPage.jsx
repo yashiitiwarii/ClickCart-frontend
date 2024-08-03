@@ -33,9 +33,13 @@ const SingleProductPage = () => {
               ))}
             </div>
             <img
-              src={`http://localhost:5000/products/${product.images[selectedImage]}`}
+              src={`${config.backendURL}/products/${product.images[selectedImage]}`}
               alt={product.title}
               className="single_product_display"
+              onError={(e) => {
+                e.target.src = "path/to/placeholder-image.jpg"; // Fallback image
+                console.error(`Failed to load image: ${e.target.src}`);
+              }}
             />
           </div>
           <div className="single_product_details">
