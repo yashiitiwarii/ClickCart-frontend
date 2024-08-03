@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SideBar.css";
 import useData from "../../hooks/useData";
 import LinkWithIcon from "./../LinkWithIcon";
-import "../../config.json";
+import config from "../../config.json";
 const SideBar = () => {
   const { data: categories, error } = useData("/category");
 
